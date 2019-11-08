@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+        <title>Kontakt</title>
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Wallpaper Solutions</h1>
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über Uns</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>		 
+        </nav>
+    
+        <hr>
+
+        <h2>Schreib uns:</h2>
+
+        <!-- Kontaktformular -->
+        <form action="contact.html" method="get">
+            <!-- 
+                Mit label-Element wird Eingabefeldern etc. eine Beschriftung hinzugefügt
+                und mit for-Attribut einem Eingabeelement zugeordnet
+             -->
+            <label for="name"> 
+                <input type="text" id="name" name="name" placeholder="Dein Name"><br>
+            </label>
+            
+            <label for="email">
+                <input type="email" id="email" name="email" placeholder="Deine E-Mail"><br>
+            </label>
+            
+            <label for="nachricht">
+                <textarea id="nachricht" name="nachricht" placeholder="Deine Nachricht" cols="30" rows="5"></textarea>
+            </label>
+
+            <br>
+            <input type="submit" value="Abschicken">
+        </form> 
+
+        <hr>
+
+        <footer>
+            <h5>Folg uns auf:</h5>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="images/facebook.png" width="30px">
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="images/youtube.png" width="30px">
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="images/instagram.png" width="30px">
+            </a>
+        </footer>
+    </body>
+</html>
