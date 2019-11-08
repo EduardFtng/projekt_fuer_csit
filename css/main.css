@@ -2,20 +2,17 @@ body {
     background-color: #FFFFCC;
 }
 
-/* Add a black background color to the top navigation */
+/* Navigationsleiste */
+/* Aussehen von der Navigationsleiste */
 .topnav {
     position: relative;
     overflow: hidden;
     background: linear-gradient(45deg, rgb(250, 13, 13) 0%, rgb(80, 33, 255) 100%);
 }
 
-.topnav-logo {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-}
 
-/* Style the links inside the navigation bar */
+
+/* Das Aussehen von den Links in der Navigationsleiste */
 .topnav a {
     float: left;
     color: #f2f2f2;
@@ -25,16 +22,23 @@ body {
     font-size: 17px;
 }
 
-/* Change the color of links on hover */
+/* Farbe von Hover-Effekt */
 .topnav a:hover {
     background-color: #FFAA00;
     color: black;
 }
 
-/* Add a color to the active/current link */
+/* Farbe vom aktiven Link */
 .topnav a.active {
     background-color: #211600;
     color: white;
+}
+
+/* Logo in der Navigationsleiste */
+.topnav-logo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
 /* Centered section inside the top navigation */
@@ -47,12 +51,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Right-aligned section inside the top navigation */
-.topnav-right {
-    float: right;
-}
-
-/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+/* @media-Einstellungen damit die Navigationsleiste responsiv ist, die Links werden aufeinander gestapelt */
 @media screen and (max-width: 800px) {
 
     .topnav a,
@@ -67,4 +66,15 @@ body {
         left: 0;
         transform: none;
     }
+}
+
+/* Header */
+/* Header mit Hintergrunsbild */
+.header-img {
+    background-image: url("../images/header-bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+
 }
