@@ -76,5 +76,23 @@ body {
     background-size: cover;
     background-position: center center;
     height: 500px;
+}
 
+/* Hauptinhalt von index.html mit flexbox */
+.container-main {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 400px;
+    width: auto;
+}
+
+.container-sub{
+    display: flex;
+    flex-direction: column;
+}
+
+.vs-img {
+    width: 300px;
+    margin: auto;
 }
