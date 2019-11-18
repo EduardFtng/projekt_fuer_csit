@@ -12,62 +12,72 @@
 <body>
 
     <!-- Navigationsleiste der Website -->
-    <div class="topnav">
-        <div class="topnav-centered">
-            <a href="index.html"><img src="images/icons/logo1.png " class="topnav-logo"></a>
+    <nav>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">Über Uns</a>
+            <div class="dropdown">
+                <button class="dropbtn">Kontakt</button>
+                <div class="dropdown-content">
+                    <a href="contact.html" class="active">Schreib Uns</a>
+                    <a href="#">Sende Uns Ein Bild</a>
+                </div>
+            </div>
         </div>
-        <a href="index.html">Home</a>
-        <a href="about.html">Über Uns</a>
-        <a href="contact.html" class="active">Kontakt</a>
-    </div>
+    </nav>
+
     <hr>
+
     <!-- Header mit Hintergrundbild -->
     <header>
         <div class="header-img">
-            <h1">Wallpaper Solutions</h1>
+            <!-- <h1">Wallpaper Solutions</h1> -->
         </div>
     </header>
 
     <hr>
+    <main>
+        <h2 class="kntkt-titel">Schreib uns:</h2>
 
-    <h2>Schreib uns:</h2>
-
-    <!-- Kontaktformular -->
-    <form action="contact.html" method="get">
-        <!-- 
+        <div class="kontaktfrm">
+            <!-- Kontaktformular -->
+            <form action="contact.html" method="get">
+                <!-- 
                 Mit label-Element wird Eingabefeldern etc. eine Beschriftung hinzugefügt
                 und mit for-Attribut einem Eingabeelement zugeordnet
              -->
-        <label for="name">
-            <input type="text" id="name" name="name" placeholder="Dein Name"><br>
-        </label>
+                <label for="name">
+                    <input type="text" id="name" name="name" placeholder="Dein Name"><br>
+                </label>
 
-        <label for="email">
-            <input type="email" id="email" name="email" placeholder="Deine E-Mail"><br>
-        </label>
+                <label for="email">
+                    <input type="email" id="email" name="email" placeholder="Deine E-Mail"><br>
+                </label>
 
-        <label for="nachricht">
-            <textarea id="nachricht" name="nachricht" placeholder="Deine Nachricht" cols="30" rows="5"></textarea>
-        </label>
+                <label for="nachricht">
+                    <textarea id="nachricht" name="nachricht" placeholder="Deine Nachricht" cols="30"
+                        rows="5"></textarea>
+                </label>
 
-        <br>
-        <input type="submit" value="Abschicken">
-    </form>
-
+                <br>
+                <input type="submit" value="Abschicken" class="btn">
+            </form>
+        </div>
+    </main>
     <hr>
 
     <footer>
-        <h5>Folg uns auf:</h5>
+        <p>Folg uns auf:</p>
         <a href="https://www.facebook.com/" target="_blank">
-            <img src="images/icons/facebook.png" width="30px">
+            <img src="images/icons/facebook.png" class="sm-icon" alt="facebook">
         </a>
 
         <a href="https://www.youtube.com/" target="_blank">
-            <img src="images/icons/youtube.png" width="30px">
+            <img src="images/icons/youtube.png" class="sm-icon" alt="youtube">
         </a>
 
         <a href="https://www.instagram.com/" target="_blank">
-            <img src="images/icons/instagram.png" width="30px">
+            <img src="images/icons/instagram.png" class="sm-icon" alt="instagram">
         </a>
     </footer>
 </body>

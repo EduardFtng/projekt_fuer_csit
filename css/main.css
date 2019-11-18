@@ -1,70 +1,99 @@
 body {
-    background-color: #FFFFCC;
+    background-color: rgb(228, 226, 226);
+}
+
+main {
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 /* Navigationsleiste */
 /* Aussehen von der Navigationsleiste */
 .topnav {
-    position: relative;
     overflow: hidden;
     background: linear-gradient(45deg, rgb(250, 13, 13) 0%, rgb(80, 33, 255) 100%);
 }
 
-
-
 /* Das Aussehen von den Links in der Navigationsleiste */
 .topnav a {
     float: left;
+    font-size: 17px;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-}
-
-/* Farbe von Hover-Effekt */
-.topnav a:hover {
-    background-color: #FFAA00;
-    color: black;
 }
 
 /* Farbe vom aktiven Link */
-.topnav a.active {
+.topnav a.active, .dropbtn {
     background-color: #211600;
     color: white;
 }
 
-/* Logo in der Navigationsleiste */
-.topnav-logo {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+/* The dropdown container */
+.dropdown {
+    float: left;
 }
 
-/* Centered section inside the top navigation */
-.topnav-centered a {
-    pointer-events: none;
-    float: none;
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 13px 16px;
+    /* Hintergrundfarbe wird geerbt */
+    background-color: inherit;
+}
+
+/* Farbe von Hover-Effekt */
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #FFAA00;
+    color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(233, 192, 105);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* @media-Einstellungen damit die Navigationsleiste responsiv ist, die Links werden aufeinander gestapelt */
 @media screen and (max-width: 800px) {
 
-    .topnav a,
-    .topnav-right {
+    .topnav a {
         float: none;
         display: block;
     }
 
-    .topnav-centered a {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
+    .dropdown,
+    .dropbtn {
+        width: 100%;
     }
 }
 
@@ -79,20 +108,119 @@ body {
 }
 
 /* Hauptinhalt von index.html mit flexbox */
-.container-main {
+.titel {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 3px #211600;
+}
+
+/* Flexbox */
+.flex-container {
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    height: 400px;
-    width: auto;
+    justify-content: center;
+    width: 100%;
 }
 
-.container-sub{
+.flex-sub-container {
     display: flex;
     flex-direction: column;
+    margin: 1.5em;
 }
 
+.flex-buttons {
+    align-self: center;
+    margin-top: 0.5em;
+}
+
+/* Bilder */
 .vs-img {
     width: 300px;
-    margin: auto;
+    transition: transform 0.5s ease;
+}
+
+/* Bild-Container */
+.img-box {
+    width: 300px;
+    height: 225px;
+    /* Removing this will break the effects */
+    overflow: hidden;
+}
+
+.vs-img:hover {
+    transform: scale(1.2);
+}
+
+/* Buttons */
+.btn {
+    background-color: rgb(32, 32, 32);
+    border: 2px solid rgb(32, 32, 32);
+    color: white;
+    padding: 0.3em 1.2em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: white;
+    border: 2px solid rgb(32, 32, 32);
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Kontaktseite */
+/* Kontaktformular */
+
+.kntkt-titel {
+    text-align: center;
+}
+
+/* Add a background color and some padding around the form */
+.kontaktfrm {
+    border-radius: 5px;
+    background-color: #e0bebe;
+    padding: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+input[type=email],
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.sm-icon {
+    width: 30px;
+    margin: 0.25em;
 }
