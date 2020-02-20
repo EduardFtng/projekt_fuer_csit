@@ -61,7 +61,6 @@ main {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
 }
 
 /* Links im dropdown */
@@ -98,19 +97,15 @@ main {
     }
 }
 
-/* Header */
-/* Header mit Hintergrunsbild */
+/* Hintergrunsbild im Header */
 .header-img {
     background-image: url("../images/header-bg1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-position: center;
     height: 500px;
 }
 
 /* Hauptinhalt von index.html mit flexbox */
 .titel {
-    display: block;
     text-align: center;
     font-size: 2em;
     margin-bottom: 0;
@@ -119,10 +114,9 @@ main {
 
 /* Flexbox */
 .flex-container {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
 }
 
 .flex-sub-container {
@@ -136,18 +130,18 @@ main {
     margin-top: 0.5em;
 }
 
-/* Bilder */
-.vs-img {
-    width: 300px;
-    transition: transform 0.5s;
-}
-
 /* Bild-Container */
 .img-box {
     width: 300px;
     height: 225px;
     /* Braucht man für den Zoom-Effekt */
     overflow: hidden;
+}
+
+/* Bilder */
+.vs-img {
+    width: 300px;
+    transition: transform 0.5s;
 }
 
 .vs-img:hover {
@@ -160,8 +154,6 @@ main {
     border: 2px solid rgb(32, 32, 32);
     color: white;
     padding: 0.3em 1.2em;
-    text-align: center;
-    text-decoration: none;
     font-size: 16px;
     margin: 4px 2px;
     transition-duration: 0.4s;
