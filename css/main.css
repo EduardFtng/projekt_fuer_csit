@@ -118,8 +118,11 @@ main {
     margin: 5px;
 }
 
+/* Link Dekorationen und Umrandung werden entfernt + schwarze Schrifftfarbe */
 .filter-link {
-
+    text-decoration: none;
+    outline: none;
+    color: black;
 }
 
 .titel {
