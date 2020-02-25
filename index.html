@@ -44,340 +44,371 @@
 
     <!-- Inhalt vom index.html -->
     <main>
+        <div class="flex-container-main">
+            <div class="flex-container-filter-left">
+                <ul class="filter-list">
+                    <li class="filter-item">
+                        <a href="#" class="filter-link" onclick="zeigeAlles(); return false">Alle</a>
+                    </li>
+                    <li class="filter-item">
+                        <a href="#" class="filter-link" onclick="zeigeFilter(neuste); return false">Neuste</a>
+                    </li>
+                    <li class="filter-item">
+                        <a href="#" class="filter-link" onclick="zeigeFilter(dark); return false">Dark</a>
+                    </li>
+                    <li class="filter-item">
+                        <a href="#" class="filter-link" onclick="zeigeFilter(space); return false">Space</a>
+                    </li>
+                    <li class="filter-item">
+                        <a href="#" class="filter-link" onclick="zeigeFilter(minimalism); return false">Minimalism</a>
+                    </li>
+                    <li class="filter-item">
+                        <a href="#" class="filter-link" onclick="zeigeFilter(micro); return false">Micro</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="flex-container-inhalt" id="neuste">
+                    <h3 class="titel">Neuste</h3>
+                    <div class="flex-container">
 
-        <h3 class="titel">Neuste</h3>
-        <div class="flex-container">
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="#" alt="platzhalter1">
+                            </div>
 
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="#" alt="platzhalter1">
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+
+                                <!-- Platzhalter für später -->
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="#" alt="platzhalter2">
+                            </div>
+
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+
+                                <!-- Platzhalter für später -->
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="#" alt="platzhalter3">
+                            </div>
+
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+
+                                <!-- Platzhalter für später -->
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="#" alt="platzhalter4">
+                            </div>
+
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+
+                                <!-- Platzhalter für später -->
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
+                <div class="flex-container-inhalt" id="dark">
+                    <h3 class="titel">Dark</h3>
+                    <div class="flex-container">
 
-                    <!-- Platzhalter für später -->
-                    <button type="button" class="btn">Download</button>
+                        <!-- Dark: Bild 1 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/dark/dark1.jpg" class="vs-img" alt="masked man with dark background">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+
+                                <!-- Platzhalter für später -->
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+                        <!-- Dark: Bild 2 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/dark/dark2.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+
+                                <!-- Platzhalter für später -->
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+                        <!-- Dark: Bild 3 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/dark/dark3.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+
+                                <!-- Platzhalter für später -->
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+                        <!-- Dark: Bild 4 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/dark/dark4.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+
+                                <!-- Platzhalter für später -->
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-container-inhalt" id="space">
+                    <h3 class="titel">Space</h3>
+                    <div class="flex-container">
+                        <!-- Space: Bild 1 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/space/space1.jpg" class="vs-img" alt="milky way">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+
+                        <!-- Space: Bild 2 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/space/space2.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <!-- Space: Bild 3 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/space/space3.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <!-- Space: Bild 4 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/space/space4.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-container-inhalt" id="minimalism">
+                    <h3 class="titel">Minimalism</h3>
+                    <div class="flex-container">
+                        <!-- Minimalism: Bild 1 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/minimalism/minimalism1.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <!-- Minimalism: Bild 2 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/minimalism/minimalism2.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <!-- Minimalism: Bild 3 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/minimalism/minimalism3.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <!-- Minimalism: Bild 4 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/minimalism/minimalism4.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-container-inhalt" id="micro">
+                    <h3 class="titel">Micro</h3>
+                    <div class="flex-container">
+                        <!-- Micro: Bild 1 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/micro/micro1.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <!-- Micro: Bild 2 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/micro/micro2.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <!-- Micro: Bild 3 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/micro/micro3.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+
+                        <!-- Micro: Bild 4 -->
+                        <div class="flex-sub-container">
+                            <div class="img-box">
+                                <img src="images/micro/micro4.jpg" class="vs-img" alt="">
+                            </div>
+                            <div class="flex-buttons">
+                                <select class="btn">
+                                    <option value="3840x2400">3840x2400</option>
+                                    <option value="1920x1080">1920x1080</option>
+                                    <option value="1280x720">1280x720</option>
+                                </select>
+                                <button type="button" class="btn">Download</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="#" alt="platzhalter2">
-                </div>
-
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-
-                    <!-- Platzhalter für später -->
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="#" alt="platzhalter3">
-                </div>
-
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-
-                    <!-- Platzhalter für später -->
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-            
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="#" alt="platzhalter4">
-                </div>
-
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-
-                    <!-- Platzhalter für später -->
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-        </div>
-
-
-        <h3 class="titel">Dark</h3>
-        <div class="flex-container">
-
-            <!-- Dark: Bild 1 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/dark/dark1.jpg" class="vs-img" alt="masked man with dark background">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-
-                    <!-- Platzhalter für später -->
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-            <!-- Dark: Bild 2 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/dark/dark2.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-
-                    <!-- Platzhalter für später -->
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-            <!-- Dark: Bild 3 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/dark/dark3.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-
-                    <!-- Platzhalter für später -->
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-            <!-- Dark: Bild 4 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/dark/dark4.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-
-                    <!-- Platzhalter für später -->
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="titel">Space</h3>
-        <div class="flex-container">
-            <!-- Space: Bild 1 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/space/space1.jpg" class="vs-img" alt="milky way">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-
-            <!-- Space: Bild 2 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/space/space2.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-            <!-- Space: Bild 3 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/space/space3.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-            <!-- Space: Bild 4 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/space/space4.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="titel">Minimalism</h3>
-        <div class="flex-container">
-            <!-- Minimalism: Bild 1 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/minimalism/minimalism1.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-            <!-- Minimalism: Bild 2 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/minimalism/minimalism2.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-            <!-- Minimalism: Bild 3 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/minimalism/minimalism3.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-            <!-- Minimalism: Bild 4 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/minimalism/minimalism4.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-
-        </div>
-
-        <h3 class="titel">Micro</h3>
-        <div class="flex-container">
-            <!-- Micro: Bild 1 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/micro/micro1.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-            <!-- Micro: Bild 2 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/micro/micro2.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-            <!-- Micro: Bild 3 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/micro/micro3.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
-            <!-- Micro: Bild 4 -->
-            <div class="flex-sub-container">
-                <div class="img-box">
-                    <img src="images/micro/micro4.jpg" class="vs-img" alt="">
-                </div>
-                <div class="flex-buttons">
-                    <select class="btn">
-                        <option value="3840x2400">3840x2400</option>
-                        <option value="1920x1080">1920x1080</option>
-                        <option value="1280x720">1280x720</option>
-                    </select>
-                    <button type="button" class="btn">Download</button>
-                </div>
-            </div>
-
         </div>
     </main>
 
