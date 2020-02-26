@@ -239,6 +239,10 @@ footer {
     margin-right: 3em;
 }
 
+footer a {
+    outline: none;
+}
+
 .sm-icon {
     width: 30px;
     margin: 0.25em;
