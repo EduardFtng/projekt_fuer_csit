@@ -25,7 +25,8 @@ main {
 }
 
 /* Farbe vom aktiven Link */
-.topnav a.active, .dropbtn {
+.topnav a.active,
+.dropbtn {
     background-color: #211600;
     color: white;
 }
@@ -140,6 +141,7 @@ main {
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
+
 .flex-container-inhalt {
     display: flex;
     flex-direction: column;
@@ -246,4 +248,59 @@ footer a {
 .sm-icon {
     width: 30px;
     margin: 0.25em;
+}
+
+/* Styling für Modal */
+/* Impressum Button */
+.impressumBtn {
+    margin-left: auto; /* Schiebt es an den rechten Rand */
+    text-decoration: none;
+    color: black;
+}
+
+/* Modal (+ Hintergrund) */
+.modal {
+    /* Nomalerweise versteckt */
+    display: none;
+    /* Fixiert */
+    position: fixed;
+    /* Wird im Vodergrund angezeigt */
+    z-index: 1;
+    /* Position von Modal */
+    padding-top: 100px;
+    /* Volle Breite */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Volle Höhe */
+    height: 100%;
+    /* Erlaubt es zu scrollen, wenn es nötig ist */
+    overflow: auto;
+    /* Fallback Hintergrundsfarbe */
+    background-color: rgb(0, 0, 0);
+    /* Durchsichtbarer schwarzer Hintergrund */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Inhalt */
+.modal-inhalt {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    padding: 20px;
+    margin: 50px;
+}
+
+/* Button (X) zum schließen */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus /* <- ??? */{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
