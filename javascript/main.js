@@ -1,50 +1,49 @@
-// Bestimmte HTML Elementen verstecken (index.html)
-function versteckeElemente() {
-    dark.style.display = 'none';
-    space.style.display = 'none';
-    minimalism.style.display = 'none';
-    micro.style.display = 'none';
-}
-
 var neuste = document.getElementById("neuste");
 var dark = document.getElementById("dark");
 var space = document.getElementById("space");
 var minimalism = document.getElementById("minimalism");
-var micro = document.getElementById("micro");
+var macro = document.getElementById("macro");
 
+// Bestimmte HTML Elementen verstecken (index.html)
+function versteckeElemente() {
+    dark.style.display = "none";
+    space.style.display = "none";
+    minimalism.style.display = "none";
+    macro.style.display = "none";
+}
 
 //HTML Elemente ein- und ausblenden (index.html)
 function zeigeFilter(id) {
     if (id == neuste) {
         neuste.style.display = "flex";
-        dark.style.display = 'none';
-        space.style.display = 'none';
-        minimalism.style.display = 'none';
-        micro.style.display = 'none';
+        dark.style.display = "none";
+        space.style.display = "none";
+        minimalism.style.display = "none";
+        macro.style.display = "none";
     } else if (id == dark) {
-        neuste.style.display = 'none';
-        dark.style.display = 'flex';
+        neuste.style.display = "none";
+        dark.style.display = "flex";
         space.style.display = "none";
-        minimalism.style.display = 'none';
-        micro.style.display = 'none';
+        minimalism.style.display = "none";
+        macro.style.display = "none";
     } else if (id == space) {
-        neuste.style.display = 'none';
-        dark.style.display = 'none';
+        neuste.style.display = "none";
+        dark.style.display = "none";
         space.style.display = "flex";
-        minimalism.style.display = 'none';
-        micro.style.display = 'none';
+        minimalism.style.display = "none";
+        macro.style.display = "none";
     } else if (id == minimalism) {
-        neuste.style.display = 'none';
-        dark.style.display = 'none';
+        neuste.style.display = "none";
+        dark.style.display = "none";
         space.style.display = "none";
-        minimalism.style.display = 'flex';
-        micro.style.display = 'none';
+        minimalism.style.display = "flex";
+        macro.style.display = "none";
     } else {
-        neuste.style.display = 'none';
-        dark.style.display = 'none';
+        neuste.style.display = "none";
+        dark.style.display = "none";
         space.style.display = "none";
-        minimalism.style.display = 'none';
-        micro.style.display = 'flex';
+        minimalism.style.display = "none";
+        macro.style.display = "flex";
     }
 }
 
@@ -54,7 +53,7 @@ function zeigeAlles() {
     dark.style.display = "flex";
     space.style.display = "flex"
     minimalism.style.display = "flex";
-    micro.style.display = "flex";
+    macro.style.display = "flex";
 }
 
 // Alert Fenster für die Navigationsleiste
@@ -82,20 +81,20 @@ xBtn.onclick = function () {
     modal.style.display = "none";
 }
 
-// Funktion um den Modal, durch ein Click außerhalt von Modal, zu schließen
+// Funktion um den Modal, durch ein Click außerhalb von Modal, zu schließen
 window.onclick = function (event) {
-    if (event.target == modal) {
+    if (event.target == modal) { // <-???
         modal.style.display = "none";
     }
 }
 
 // Funktion mit Text für den Modal
-var impTitel = document.getElementById("impressumTitel")
+var impTitel = document.getElementById("impressumTitel");
 var impTxt = document.getElementById("impressumText");
 
 function schreibeImpText() {
 
-    impTitel.innerHTML = "Impressum"
+    impTitel.innerHTML = "Impressum";
     impTxt.innerHTML = "Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt. \
     Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. \
     Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. \
@@ -117,9 +116,73 @@ function schreibeImpText() {
     Nutzung oder Nichtnutzung solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf welche \
     verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist. \
     Werden uns Rechtsverletzungen bekannt, werden die externen Links durch uns unverzüglich entfernt.";
-    
-
 }
+
+// AJAX mit einer .txt Datei (about.html)
+// Auf Event horchen mit Fehlerbehandlung
+try {
+    document.getElementById("zeigeMehrUeberUns").addEventListener("click", ladeText);
+} catch (err) {
+    console.log("'Mehr Zeigen' Button(about.html) ist nicht definiert.");
+    //console.log(err)
+}
+
+function ladeText() {
+    // Erstellt neuen XHR Object
+    var httpReq = new XMLHttpRequest();
+
+    httpReq.open("GET", "texte_etc/ueberTxt.txt", true);
+
+    httpReq.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ueberUnsText").innerHTML = this.responseText;
+        } else {
+            document.getElementById("ueberUnsText").innerHTML = "Text Datei nicht gefunden!";
+        }
+    }
+    // Sendet die Anfrage
+    httpReq.send();
+}
+
+try {
+    document.getElementById("zeigeMitglieder").addEventListener("click", ladeMitglieder);
+} catch (err) {
+    console.log("'Die Mitgliederliste einblenden' Button(about.html) ist nicht definiert.");
+    //console.log(err)
+}
+
+function ladeMitglieder() {
+    var httpReq = new XMLHttpRequest();
+    httpReq.open("GET", "texte_etc/mitglieder.json", true);
+
+
+    httpReq.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+            var mitglieder = JSON.parse(this.responseText);
+
+            var ausgabe = '';
+
+            for (var i in mitglieder) {
+                ausgabe +=
+                    '<div class="user">' +
+                    '<img src="' + mitglieder[i].avatar_pfad + '" width="70" height="70">' +
+                    '<ul>' +
+                    '<li><b>Name: </b>' + mitglieder[i].name + '</li>' +
+                    '<li><b>Email: </b>' + mitglieder[i].email + '</li>' +
+                    '</ul>' +
+                    '</div>';
+            }
+
+            document.getElementById("mitgliederListe").innerHTML = ausgabe;
+        } else {
+            document.getElementById("mitgliederListe").innerHTML = ".json-Datei nicht gefunden!";
+        }
+    }
+
+    httpReq.send();
+}
+
 
 // Beim Laden der Seiten werden Funktionen, um Elemente zu verstecken bzw Text hinzufügen, ausgeführt
 window.onload = schreibeImpText();

@@ -1,0 +1,20 @@
+[
+  {
+    "avatar_pfad": "images/mitglieder/rick_avatar.jpg",
+    "id": 1,
+    "name": "Rick",
+    "email": "rick@gmail.com"
+  },
+  {
+    "avatar_pfad": "images/mitglieder/morty_avatar.jpeg",
+    "id": 2,
+    "name": "Morty",
+    "email": "morty@gmail.com"
+  },
+  {
+    "avatar_pfad": "images/mitglieder/squanchy_avatar.jpg",
+    "id": 3,
+    "name": "Squanchy",
+    "email": "squanchy@gmail.com"
+  }
+]

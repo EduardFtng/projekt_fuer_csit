@@ -253,7 +253,8 @@ footer a {
 /* Styling für Modal */
 /* Impressum Button */
 .impressumBtn {
-    margin-left: auto; /* Schiebt es an den rechten Rand */
+    margin-left: auto;
+    /* Schiebt es an den rechten Rand */
     text-decoration: none;
     color: black;
 }
@@ -298,9 +299,20 @@ footer a {
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus /* <- ??? */{
+.close:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Styling für die Mitgliederliste auf about.html */
+.user {
+    display: flex;
+    background: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user ul {
+    list-style: none;
 }
