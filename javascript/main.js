@@ -183,6 +183,20 @@ function ladeMitglieder() {
     httpReq.send();
 }
 
+// contact.html Eingabe wird im Alert wiedergegeben ????
+function formularAusgabe() {
+
+    for (var i = 0; i < document.forms[0].elements.length - 1; i++) {
+        if (i == 0) {
+            alert("Name: " + document.forms[0].elements[i].value);
+        } else if (i == 1) {
+            alert("Email: " + document.forms[0].elements[i].value);
+        } else if (i == 2) {
+            alert("Nachricht: " + document.forms[0].elements[i].value);
+        }
+    }
+}
+
 
 // Beim Laden der Seiten werden Funktionen, um Elemente zu verstecken bzw Text hinzufügen, ausgeführt
 window.onload = schreibeImpText();
