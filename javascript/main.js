@@ -1,3 +1,4 @@
+// Abschnitte von der index.html werden verschiedenen Variablen zugewiesen
 var neuste = document.getElementById("neuste");
 var dark = document.getElementById("dark");
 var space = document.getElementById("space");
@@ -12,7 +13,7 @@ function versteckeElemente() {
     macro.style.display = "none";
 }
 
-//HTML Elemente ein- und ausblenden (index.html)
+//Funktion um HTML Elemente ein- und ausblenden (index.html)
 function zeigeFilter(id) {
     if (id == neuste) {
         neuste.style.display = "flex";
@@ -62,13 +63,13 @@ function alertWindow() {
 }
 
 // JS für Modal
-// Getter für Modal
+// Variable für kompletten Modal-Abschnitt
 var modal = document.getElementById("impressumModal");
 
-// Getter für Button um Modal einzubleden
+// Variable für Button um Modal einzubleden
 var btn = document.getElementById("impressumBtnId");
 
-// Getter für X-Button um Modal zu schließen
+// Variable für X-Button um Modal zu schließen
 var xBtn = document.getElementById("xBtn");
 
 // Funktion um den Modal einzublenden
@@ -83,7 +84,7 @@ xBtn.onclick = function () {
 
 // Funktion um den Modal, durch ein Click außerhalb von Modal, zu schließen
 window.onclick = function (event) {
-    if (event.target == modal) { // <-???
+    if (event.target == modal) {
         modal.style.display = "none";
     }
 }
@@ -134,6 +135,7 @@ function ladeText() {
     httpReq.open("GET", "texte_etc/ueberTxt.txt", true);
 
     httpReq.onreadystatechange = function () {
+        // Status 4 und 200 sind der Ready-State, das heißt dass die Verbindung hergestellt werden kann
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("ueberUnsText").innerHTML = this.responseText;
         } else {
@@ -159,6 +161,7 @@ function ladeMitglieder() {
     httpReq.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
+            //Der Inhalt der JSON Datei wird sozusagen übersetzt und in die Variable Mitglieder geschrieben
             var mitglieder = JSON.parse(this.responseText);
 
             var ausgabe = '';
@@ -183,16 +186,33 @@ function ladeMitglieder() {
     httpReq.send();
 }
 
-// contact.html Eingabe wird im Alert wiedergegeben ????
+// contact.html - beim drücken von "Abschicken" wird geschaut, 
+// ob die eingabe nicht ein leerer String ist, wenn nicht, wird die Eingabe im 
+// Alert wiedergegeben. Ansonsten wird die for-Schleifen mit einer Warnung, abgebrochen.
 function formularAusgabe() {
 
     for (var i = 0; i < document.forms[0].elements.length - 1; i++) {
         if (i == 0) {
-            alert("Name: " + document.forms[0].elements[i].value);
+            if (document.forms[0].elements[i].value != "") {
+                alert("Name: " + document.forms[0].elements[i].value);
+            } else {
+                alert("Name nicht angegeben!")
+                break;
+            }
         } else if (i == 1) {
-            alert("Email: " + document.forms[0].elements[i].value);
+            if (document.forms[0].elements[i].value != "") {
+                alert("Email: " + document.forms[0].elements[i].value);
+            } else {
+                alert("Email nicht angegeben!")
+                break;
+            }
         } else if (i == 2) {
-            alert("Nachricht: " + document.forms[0].elements[i].value);
+            if (document.forms[0].elements[i].value != "") {
+                alert("Deine Nachricht: " + document.forms[0].elements[i].value);
+            } else {
+                alert("Du hast keine Nachricht geschrieben!")
+                break;
+            }
         }
     }
 }
